@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
+
+.noto {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.jetbrains {
+  font-family: "JetBrains Mono", monospace;
+}
