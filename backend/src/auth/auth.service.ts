@@ -97,7 +97,7 @@ export class AuthService {
     };
 
     return this.jwt.signAsync(payload, {
-      expiresIn: '10m',
+      expiresIn: '2h',
       secret: this.cfgService.get('JWT_SECRET'),
     });
   }

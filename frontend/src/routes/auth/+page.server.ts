@@ -43,7 +43,7 @@ export const actions: Actions = {
       sameSite: "lax",
     });
 
-    throw redirect(302, "/dashboard");
+    throw redirect(302, "/dashboard/todos");
   },
 
   signup: async (event) => {

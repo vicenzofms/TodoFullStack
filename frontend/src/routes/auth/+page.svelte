@@ -1,10 +1,6 @@
 <script lang="ts">
-  // import { goto } from "$app/navigation";
   $: loginMode = true;
   $: actionForm = loginMode ? "?/login" : "?/signup";
-
-  export let form;
-  $: console.log(form);
 
   function toggleLogin() {
     loginMode = !loginMode;
@@ -30,7 +26,11 @@
       >{loginMode ? "Ainda não tem uma conta?" : "Já tem uma conta?"}</button
     >
   </h2>
-  <form class="flex flex-col w-3/5 py-10 gap-4" method="post" action="?/login">
+  <form
+    class="flex flex-col w-3/5 py-10 gap-4"
+    method="post"
+    action={actionForm}
+  >
     <input
       type="email"
       id="emailInput"
